@@ -67,7 +67,7 @@ function logout(){
 
         alert("Logged Out Successfully");
 
-        window.location.replace("login.html");
+        window.location.replace("index.html");
 
     })
 
@@ -225,7 +225,7 @@ firebase.auth().onAuthStateChanged((user)=>{
 
     if(!user && window.location.pathname.includes('dashboard.html')){
 
-        window.location.replace('login.html');
+        window.location.replace('index.html');
     }
 });
 
