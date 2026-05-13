@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PCH Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="sidebar">
+
+    <h2>PCH</h2>
+
+    <ul>
+        <li>Dashboard</li>
+        <li>Projects</li>
+        <li>Tasks</li>
+        <li>Team</li>
+    </ul>
+
+    <button class="logout-btn" onclick="logout()">
+        Logout
+    </button>
+
+</div>
+
+
+<div class="main-content">
+
+    <div class="topbar">
+        <h1>Project Collaboration Hub</h1>
+    </div>
+
+
+    <div class="stats-container">
+
+        <div class="stat-card">
+            <h3>Total Projects</h3>
+            <p id="projectCount">0</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>Total Tasks</h3>
+            <p id="taskCount">0</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>Completed Tasks</h3>
+            <p id="completedCount">0</p>
+        </div>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>Create Project</h2>
+
+        <input type="text"
+               id="projectName"
+               placeholder="Project Name">
+
+        <button onclick="createProject()">
+            Create Project
+        </button>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>Add Task</h2>
+
+        <input type="text"
+               id="taskName"
+               placeholder="Task Name">
+
+        <input type="text"
+               id="assignedTo"
+               placeholder="Assigned To">
+
+        <button onclick="addTask()">
+            Add Task
+        </button>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>Task List</h2>
+
+        <div id="taskList"></div>
+
+    </div>
+
+</div>
+
+
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-storage-compat.js"></script>
+
+<script src="firebase.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
